@@ -1,0 +1,30 @@
+doctype
+html
+  head
+    title #{title} - SensorTracker
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(charset="utf-8")
+    title Week 8 - Library Demo - Highcharts
+    link(rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css")
+    script( src="https://code.jquery.com/jquery-1.9.1.js")
+    script( src="https://code.highcharts.com/highcharts.js")
+    script( src="https://code.highcharts.com/modules/exporting.js")
+    script( src="javascripts/papaparse.min.js")
+    script( src="javascripts/three.js")
+    script( src="javascripts/Tween.js")
+    script( src="javascripts/TrackballControls.js")
+    script( src="javascripts/www-ahrs.js")
+
+    //- link(rel="stylesheet" href="/css/bootstrap.min.css")
+    //- link(rel="stylesheet" href="/css/main.css")
+    block css
+  body
+    header
+      h1 SensorTracker
+    .container
+      .main-content
+        block content
+      .sidebar
+        block sidebar
+    footer
+      p This is a basic website for serving data captured via AndroSensor
