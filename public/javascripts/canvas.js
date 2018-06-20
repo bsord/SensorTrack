@@ -106,7 +106,7 @@ function playRotation(){
         var luminosity = orientationData[i][4] / 50;
         var noiseLevel = orientationData[i][5];
 
-        new TWEEN.Tween( boxmesh.rotation ).to( {  x:  orientation.roll, y:  orientation.pitch}, animationSpeed ).start();
+        new TWEEN.Tween( boxmesh.rotation ).to( {  x:  orientation.roll}, animationSpeed ).start();
         // Set spotlight intensity to the luminosity from dataset
         new TWEEN.Tween( sptLight ).to( {  intensity:  luminosity}, animationSpeed).start();
         i++
