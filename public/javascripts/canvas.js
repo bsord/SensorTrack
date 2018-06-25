@@ -111,7 +111,7 @@ function playRotation(){
         //boxmesh.rotation.z = orientationData[i][2] * Math.PI / 180;
 
 
-        //new TWEEN.Tween( boxmesh.rotation ).to( {  y:  orientation.pitch}, animationSpeed ).start();
+        new TWEEN.Tween( boxmesh.rotation ).to( {  y:  orientation.pitch}, animationSpeed ).start();
         // Set spotlight intensity to the luminosity from dataset
         new TWEEN.Tween( sptLight ).to( {  intensity:  luminosity}, animationSpeed).start();
         i++

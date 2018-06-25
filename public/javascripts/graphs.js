@@ -12,7 +12,7 @@ function handleFileSelect(evt) {
 }
 
 function handleFileDefault(evt) {
-  Papa.parse("http://signtesting.dyndns.org:3000/sensordata/samplefile.csv", {
+  Papa.parse("sensordata/samplefile.csv", {
     header: true,
     dynamicTyping: true,
     download:true,
