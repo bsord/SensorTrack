@@ -106,7 +106,12 @@ function playRotation(){
         var luminosity = orientationData[i][4] / 50;
         var noiseLevel = orientationData[i][5];
 
-        new TWEEN.Tween( boxmesh.rotation ).to( {  x:  orientation.roll}, animationSpeed ).start();
+        //boxmesh.rotation.x = orientationData[i][1] * Math.PI / 180;
+        //boxmesh.rotation.y = orientationData[i][2] * Math.PI / 180;
+        //boxmesh.rotation.z = orientationData[i][2] * Math.PI / 180;
+
+
+        //new TWEEN.Tween( boxmesh.rotation ).to( {  y:  orientation.pitch}, animationSpeed ).start();
         // Set spotlight intensity to the luminosity from dataset
         new TWEEN.Tween( sptLight ).to( {  intensity:  luminosity}, animationSpeed).start();
         i++
@@ -137,7 +142,7 @@ function render(){
 }
 
 function downloadData(){
-  Papa.parse("http://signtesting.dyndns.org:3000/sensordata/samplefile.csv", {
+  Papa.parse("sensordata/samplefile.csv", {
     header: true,
     dynamicTyping: true,
     download:true,
